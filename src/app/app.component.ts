@@ -4,13 +4,11 @@ import { CommonModule } from '@angular/common';
 import { Bai2Component } from './components/bai2/bai2.component';
 import { Bai3Component } from './components/bai3/bai3.component';
 import { Bai4Component } from './components/bai4/bai4.component';
-import { ParentComponent } from './components/parent/parent.component';
-import { ChaComponent } from './components/cha/cha.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,CommonModule,Bai2Component,Bai3Component,Bai4Component,ParentComponent,ChaComponent],
+  imports: [RouterOutlet,CommonModule,Bai2Component,Bai3Component,Bai4Component,],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

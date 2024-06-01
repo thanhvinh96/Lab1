@@ -2,12 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { ISanPham } from '../../ISanPham'
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { StarPipe } from '../../pipes/star.pipe';
-
 @Component({
   selector: 'app-bai4',
   standalone: true,
-  imports: [CommonModule,FormsModule,StarPipe],
+  imports: [CommonModule,FormsModule],
   templateUrl: './bai4.component.html',
   styleUrl: './bai4.component.css'
 })
