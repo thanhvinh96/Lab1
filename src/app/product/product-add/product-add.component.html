@@ -16,6 +16,16 @@
         </div>
     </div>
     <div class="form-group mt-3">
+        danh mục
+        <select name="id_cate" ngModel #id_cate="ngModel" class="form-control" >
+            <option value="1">iphone</option>
+            <option value="2">Samsung</option>
+        </select>
+        <div class="text-danger" *ngIf="id_cate.invalid && (id_cate.dirty || id_cate.touched)">
+            <div *ngIf="id_cate.errors?.['required']">Vui lòng chọn danh mục</div>
+        </div>
+    </div>
+    <div class="form-group mt-3">
         <input type="text" name="image" ngModel #image="ngModel" required placeholder="Nhập hình ảnh" class="form-control">
         <div class="text-danger" *ngIf="image.invalid && (image.dirty || image.touched)">
             Vui lòng nhập hình ảnh

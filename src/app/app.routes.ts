@@ -8,14 +8,20 @@ import { NotfoundComponent } from './page/notfound/notfound.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { ProductAddComponent } from './product/product-add/product-add.component';
 import { ProductEditComponent } from './product/product-edit/product-edit.component';
+import { AuthGuard } from './page/guards/auth.guard';
+import { LoginComponent } from './page/login/login.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
-    { path: 'about', component: AboutComponent },
+    {
+        path: 'about',
+        loadComponent: () => import('./page/about/about.component').then(c => c.AboutComponent)
+        },
     { path: 'user', component: UserListComponent },
     { path: 'user-add', component: UserAddComponent },
     { path: 'user-edit/:id', component: UserEditComponent },
-    { path: 'product', component: ProductListComponent },
+    { path: 'login', component: LoginComponent},
+    { path: 'product', component: ProductListComponent},
     { path: 'product-add', component: ProductAddComponent },
     { path: 'product-edit/:id', component: ProductEditComponent },
     { path: '**', component: NotfoundComponent }
